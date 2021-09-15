@@ -1,0 +1,56 @@
+html, 
+body {
+  box-sizing: border-box;
+    color: #fcfcfc;
+    font-family: Consolas, Monaco, 'Ubuntu Mono', monospace;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  grid-column: 1 / 4;
+}
+
+.left {
+  grid-column: 1 / 2;
+}
+
+main {
+  grid-column: 2 / 3;
+}
+
+.right {
+  grid-column: 3 / 4;
+}
+
+footer {
+  grid-column: 1 / 4;
+}
+
+
+.section, .box {
+    line-height: 1;
+    padding: 15px;
+}
+
+.blue {
+    background-color: #157bad;
+}
+
+.green {
+    background-color: #3cc368;
+}
+
+.yellow {
+    background-color: #f5a600;
+}

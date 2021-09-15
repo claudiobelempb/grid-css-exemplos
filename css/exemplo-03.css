@@ -1,0 +1,74 @@
+.l-article__title {
+    background-color: darkturquoise;
+    grid-area: title;
+}
+
+.l-article__meta {
+    background-color: lightgray;
+    grid-area: meta;
+}
+
+.l-article__copy1 {
+    background-color: royalblue;
+    grid-area: copy1;
+}
+
+.l-article__copy2 {
+    background-color: rosybrown;
+    grid-area: copy2;
+}
+
+.l-article__media {
+    background-color: khaki;
+    grid-area: media;
+    margin: 0;
+}
+
+.l-article__aside {
+    background-color: coral;
+    grid-area: aside;
+}
+
+.l-article {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+        "title  title   title   title   title   title"
+        "meta   meta    meta    meta    meta    meta "
+        "copy1  copy1   copy1   copy1   copy1   copy1"
+        "copy2  copy2   copy2   copy2   copy2   copy2"
+        "media  media   media   media   media   media"
+        "aside  aside   aside   aside   aside   aside"
+    ;
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+@media screen and (min-width: 30em) { /* 480px */
+    .l-article {
+        grid-template-areas:
+            "meta   meta    title   title   title   title"
+            "copy1  copy1   copy1   copy1   copy1   copy1"
+            "copy2  copy2   copy2   copy2   copy2   copy2"
+            "media  media   media   media   media   aside" 
+        ;
+    }
+}
+
+@media screen and (min-width: 60em) { /* 960px */
+    .l-article {
+        grid-template-areas:
+            "meta   title   title   title   copy2   copy2"
+            "copy1  copy1   copy1   copy1   copy2   copy2"
+            "copy1  copy1   copy1   copy1   copy2   copy2"
+            "media  media   media   media   media   media"
+            "aside  aside   .       .       .       .    "
+        ;
+  }
+}
+
+.l-article > * {
+    min-height: 100px;
+    padding: 1rem;
+}

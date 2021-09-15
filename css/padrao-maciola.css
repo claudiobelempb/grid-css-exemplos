@@ -1,0 +1,32 @@
+html, 
+body {
+  box-sizing: border-box;
+    color: #fcfcfc;
+    font-family: Consolas, Monaco, 'Ubuntu Mono', monospace;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  width: 100%;
+}
+
+
+.section, .box {
+    line-height: 1;
+    padding: 15px;
+}
+
+.blue {
+    background-color: #157bad;
+}
+
+.green {
+    background-color: #3cc368;
+}
